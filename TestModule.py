@@ -20,7 +20,8 @@ class Middlebury_eval:
 
 class Middlebury_other:
     def __init__(self, input_dir, gt_dir):
-        self.im_list = ['Beanbags', 'Dimetrodon', 'DogDance', 'Grove2', 'Grove3', 'Hydrangea', 'MiniCooper', 'RubberWhale', 'Urban2', 'Urban3', 'Venus', 'Walking']
+        # self.im_list = ['Beanbags', 'Dimetrodon', 'DogDance', 'Grove2', 'Grove3', 'Hydrangea', 'MiniCooper', 'RubberWhale', 'Urban2', 'Urban3', 'Venus', 'Walking']
+        self.im_list = os.listdir(input_dir)
         self.transform = transforms.Compose([transforms.ToTensor()])
 
         self.input0_list = []
